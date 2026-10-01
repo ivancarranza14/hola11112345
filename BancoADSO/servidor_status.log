@@ -1,0 +1,250 @@
+=== Verificando PHP === 
+PHP 8.5.9 (cli) (built: Jul 28 2026 13:21:24) (ZTS Visual C++ 2022 x64)
+Copyright (c) The PHP Group
+Built by The PHP Group
+Zend Engine v4.5.9, Copyright (c) Zend Technologies
+    with Zend OPcache v8.5.9, Copyright (c), by Zend Technologies
+ 
+=== Instalando dependencias con Composer === 
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating autoload files
+ 
+=== COMPOSER TERMINO, iniciando servidor === 
+[Thu Oct  1 00:27:36 2026] PHP 8.5.9 Development Server (http://localhost:8000) started
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:61970 Accepted
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:61970 [404]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:61970 Closing
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:23331 Accepted
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:23331 [200]: GET /css/estilo.css
+[Thu Oct  1 00:27:46 2026] 127.0.0.1:23331 Closing
+[Thu Oct  1 00:28:22 2026] 127.0.0.1:5760 Accepted
+[Thu Oct  1 00:28:22 2026] 127.0.0.1:5760 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:28:22 2026] 127.0.0.1:5760 Closing
+[Thu Oct  1 00:28:23 2026] 127.0.0.1:47492 Accepted
+[Thu Oct  1 00:28:23 2026] 127.0.0.1:47492 [200]: GET /css/estilo.css
+[Thu Oct  1 00:28:23 2026] 127.0.0.1:47492 Closing
+[Thu Oct  1 00:28:23 2026] 127.0.0.1:57170 Accepted
+[Thu Oct  1 00:28:43 2026] PHP Fatal error:  Uncaught PDOException: No fue posible conectar a la base de datos: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Conexion.php:43
+Stack trace:
+#0 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Repositorios\RepositorioCuentas.php(17): App\Nucleo\Conexion::obtener()
+#1 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Servicios\ServicioAutenticacion.php(19): App\Repositorios\RepositorioCuentas->__construct()
+#2 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Controladores\SesionController.php(27): App\Servicios\ServicioAutenticacion->__construct()
+#3 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Router.php(28): App\Controladores\SesionController->loginAccion()
+#4 C:\Users\Deku\OneDrive\Desktop\BancoADSO\public\index.php(14): App\Nucleo\Router->despachar('sesion/login')
+#5 {main}
+  thrown in C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Conexion.php on line 43
+[Thu Oct  1 00:28:43 2026] 127.0.0.1:57170 [200]: POST /index.php?ruta=sesion/login - Uncaught PDOException: No fue posible conectar a la base de datos: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Conexion.php:43
+Stack trace:
+#0 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Repositorios\RepositorioCuentas.php(17): App\Nucleo\Conexion::obtener()
+#1 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Servicios\ServicioAutenticacion.php(19): App\Repositorios\RepositorioCuentas->__construct()
+#2 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Controladores\SesionController.php(27): App\Servicios\ServicioAutenticacion->__construct()
+#3 C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Router.php(28): App\Controladores\SesionController->loginAccion()
+#4 C:\Users\Deku\OneDrive\Desktop\BancoADSO\public\index.php(14): App\Nucleo\Router->despachar('sesion/login')
+#5 {main}
+  thrown in C:\Users\Deku\OneDrive\Desktop\BancoADSO\src\Nucleo\Conexion.php on line 43
+[Thu Oct  1 00:28:43 2026] 127.0.0.1:57170 Closing
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:51411 Accepted
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:51411 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:51411 Closing
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:55075 Accepted
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:55075 [200]: GET /css/estilo.css
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:55075 Closing
+[Thu Oct  1 00:29:34 2026] 127.0.0.1:35896 Accepted
+[Thu Oct  1 00:29:47 2026] 127.0.0.1:35896 [200]: POST /index.php?ruta=sesion/login
+[Thu Oct  1 00:29:47 2026] 127.0.0.1:35896 Closing
+[Thu Oct  1 00:29:47 2026] 127.0.0.1:48711 Accepted
+[Thu Oct  1 00:29:47 2026] 127.0.0.1:48711 [200]: GET /css/estilo.css
+[Thu Oct  1 00:29:47 2026] 127.0.0.1:48711 Closing
+[Thu Oct  1 00:29:48 2026] 127.0.0.1:10466 Accepted
+[Thu Oct  1 00:30:03 2026] 127.0.0.1:10466 [200]: GET /_debug.php
+[Thu Oct  1 00:30:03 2026] 127.0.0.1:10466 Closing
+[Thu Oct  1 00:30:24 2026] 127.0.0.1:38363 Accepted
+[Thu Oct  1 00:30:24 2026] 127.0.0.1:38363 [200]: GET /_debug.php
+[Thu Oct  1 00:30:24 2026] 127.0.0.1:38363 Closing
+[Thu Oct  1 00:30:24 2026] 127.0.0.1:45639 Accepted
+[Thu Oct  1 00:30:35 2026] 127.0.0.1:45639 [200]: GET /_seed_usuarios.php
+[Thu Oct  1 00:30:35 2026] 127.0.0.1:45639 Closing
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:7937 Accepted
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:7937 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:7937 Closing
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:56713 Accepted
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:56713 [200]: GET /css/estilo.css
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:56713 Closing
+[Thu Oct  1 00:31:35 2026] 127.0.0.1:2334 Accepted
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:2334 [302]: POST /index.php?ruta=sesion/login
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:2334 Closing
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:29538 Accepted
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:29538 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:29538 Closing
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:10922 Accepted
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:10922 [200]: GET /css/estilo.css
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:10922 Closing
+[Thu Oct  1 00:31:48 2026] 127.0.0.1:40372 Accepted
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:40372 [200]: GET /index.php?ruta=retiro/formulario
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:40372 Closing
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:58907 Accepted
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:58907 [200]: GET /css/estilo.css
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:58907 Closing
+[Thu Oct  1 00:31:53 2026] 127.0.0.1:50927 Accepted
+[Thu Oct  1 00:32:04 2026] 127.0.0.1:50927 [302]: POST /index.php?ruta=retiro/registrar
+[Thu Oct  1 00:32:04 2026] 127.0.0.1:50927 Closing
+[Thu Oct  1 00:32:04 2026] 127.0.0.1:58079 Accepted
+[Thu Oct  1 00:32:04 2026] 127.0.0.1:58079 [200]: GET /index.php?ruta=retiro/resultado
+[Thu Oct  1 00:32:04 2026] 127.0.0.1:58079 Closing
+[Thu Oct  1 00:32:05 2026] 127.0.0.1:5823 Accepted
+[Thu Oct  1 00:32:05 2026] 127.0.0.1:5823 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:05 2026] 127.0.0.1:5823 Closing
+[Thu Oct  1 00:32:05 2026] 127.0.0.1:16358 Accepted
+[Thu Oct  1 00:32:08 2026] 127.0.0.1:16358 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:32:08 2026] 127.0.0.1:16358 Closing
+[Thu Oct  1 00:32:09 2026] 127.0.0.1:21434 Accepted
+[Thu Oct  1 00:32:09 2026] 127.0.0.1:21434 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:09 2026] 127.0.0.1:21434 Closing
+[Thu Oct  1 00:32:09 2026] 127.0.0.1:50338 Accepted
+[Thu Oct  1 00:32:15 2026] 127.0.0.1:50338 [200]: GET /index.php?ruta=transferencia/formulario
+[Thu Oct  1 00:32:15 2026] 127.0.0.1:50338 Closing
+[Thu Oct  1 00:32:15 2026] 127.0.0.1:46133 Accepted
+[Thu Oct  1 00:32:15 2026] 127.0.0.1:46133 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:15 2026] 127.0.0.1:46133 Closing
+[Thu Oct  1 00:32:16 2026] 127.0.0.1:60300 Accepted
+[Thu Oct  1 00:32:27 2026] 127.0.0.1:60300 [302]: POST /index.php?ruta=transferencia/registrar
+[Thu Oct  1 00:32:27 2026] 127.0.0.1:60300 Closing
+[Thu Oct  1 00:32:27 2026] 127.0.0.1:43500 Accepted
+[Thu Oct  1 00:32:27 2026] 127.0.0.1:43500 [200]: GET /index.php?ruta=transferencia/resultado
+[Thu Oct  1 00:32:27 2026] 127.0.0.1:43500 Closing
+[Thu Oct  1 00:32:28 2026] 127.0.0.1:18643 Accepted
+[Thu Oct  1 00:32:28 2026] 127.0.0.1:18643 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:28 2026] 127.0.0.1:18643 Closing
+[Thu Oct  1 00:32:28 2026] 127.0.0.1:43330 Accepted
+[Thu Oct  1 00:32:31 2026] 127.0.0.1:43330 [200]: GET /index.php?ruta=retiro/historial
+[Thu Oct  1 00:32:31 2026] 127.0.0.1:43330 Closing
+[Thu Oct  1 00:32:31 2026] 127.0.0.1:8621 Accepted
+[Thu Oct  1 00:32:31 2026] 127.0.0.1:8621 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:31 2026] 127.0.0.1:8621 Closing
+[Thu Oct  1 00:32:32 2026] 127.0.0.1:54778 Accepted
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:54778 [200]: GET /index.php?ruta=transferencia/historial
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:54778 Closing
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:27013 Accepted
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:27013 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:27013 Closing
+[Thu Oct  1 00:32:35 2026] 127.0.0.1:24642 Accepted
+[Thu Oct  1 00:32:40 2026] 127.0.0.1:24642 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:32:40 2026] 127.0.0.1:24642 Closing
+[Thu Oct  1 00:32:41 2026] 127.0.0.1:16274 Accepted
+[Thu Oct  1 00:32:41 2026] 127.0.0.1:16274 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:41 2026] 127.0.0.1:16274 Closing
+[Thu Oct  1 00:32:41 2026] 127.0.0.1:52430 Accepted
+[Thu Oct  1 00:32:45 2026] 127.0.0.1:52430 [302]: GET /index.php?ruta=sesion/logout
+[Thu Oct  1 00:32:45 2026] 127.0.0.1:52430 Closing
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:25398 Accepted
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:25398 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:25398 Closing
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:61115 Accepted
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:61115 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:61115 Closing
+[Thu Oct  1 00:32:46 2026] 127.0.0.1:40147 Accepted
+[Thu Oct  1 00:32:58 2026] 127.0.0.1:40147 [302]: POST /index.php?ruta=sesion/login
+[Thu Oct  1 00:32:58 2026] 127.0.0.1:40147 Closing
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:7865 Accepted
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:7865 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:7865 Closing
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:20618 Accepted
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:20618 [200]: GET /css/estilo.css
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:20618 Closing
+[Thu Oct  1 00:32:59 2026] 127.0.0.1:29596 Accepted
+[Thu Oct  1 00:33:03 2026] 127.0.0.1:29596 [302]: GET /index.php?ruta=sesion/logout
+[Thu Oct  1 00:33:03 2026] 127.0.0.1:29596 Closing
+[Thu Oct  1 00:33:03 2026] 127.0.0.1:63266 Accepted
+[Thu Oct  1 00:33:03 2026] 127.0.0.1:63266 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:33:03 2026] 127.0.0.1:63266 Closing
+[Thu Oct  1 00:33:04 2026] 127.0.0.1:27534 Accepted
+[Thu Oct  1 00:33:04 2026] 127.0.0.1:27534 [200]: GET /css/estilo.css
+[Thu Oct  1 00:33:04 2026] 127.0.0.1:27534 Closing
+[Thu Oct  1 00:33:04 2026] 127.0.0.1:4264 Accepted
+[Thu Oct  1 00:34:36 2026] 127.0.0.1:4264 Closed without sending a request; it was probably just an unused speculative preconnection
+[Thu Oct  1 00:34:36 2026] 127.0.0.1:4264 Closing
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:22190 Accepted
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:22190 [200]: POST /index.php?ruta=sesion/login
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:22190 Closing
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:20440 Accepted
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:20440 [200]: GET /css/estilo.css
+[Thu Oct  1 00:34:37 2026] 127.0.0.1:20440 Closing
+[Thu Oct  1 00:34:47 2026] 127.0.0.1:9293 Accepted
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:9293 [302]: POST /index.php?ruta=sesion/login
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:9293 Closing
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:40542 Accepted
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:40542 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:40542 Closing
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:35454 Accepted
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:35454 [200]: GET /css/estilo.css
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:35454 Closing
+[Thu Oct  1 00:34:48 2026] 127.0.0.1:46722 Accepted
+[Thu Oct  1 00:34:55 2026] 127.0.0.1:46722 [200]: GET /index.php?ruta=retiro/formulario
+[Thu Oct  1 00:34:55 2026] 127.0.0.1:46722 Closing
+[Thu Oct  1 00:34:55 2026] 127.0.0.1:10048 Accepted
+[Thu Oct  1 00:34:55 2026] 127.0.0.1:10048 [200]: GET /css/estilo.css
+[Thu Oct  1 00:34:55 2026] 127.0.0.1:10048 Closing
+[Thu Oct  1 00:34:56 2026] 127.0.0.1:57647 Accepted
+[Thu Oct  1 00:35:08 2026] 127.0.0.1:57647 [302]: POST /index.php?ruta=retiro/registrar
+[Thu Oct  1 00:35:08 2026] 127.0.0.1:57647 Closing
+[Thu Oct  1 00:35:08 2026] 127.0.0.1:63267 Accepted
+[Thu Oct  1 00:35:08 2026] 127.0.0.1:63267 [200]: GET /index.php?ruta=retiro/resultado
+[Thu Oct  1 00:35:08 2026] 127.0.0.1:63267 Closing
+[Thu Oct  1 00:35:09 2026] 127.0.0.1:44186 Accepted
+[Thu Oct  1 00:35:09 2026] 127.0.0.1:44186 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:09 2026] 127.0.0.1:44186 Closing
+[Thu Oct  1 00:35:09 2026] 127.0.0.1:29093 Accepted
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:29093 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:29093 Closing
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:14112 Accepted
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:14112 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:14112 Closing
+[Thu Oct  1 00:35:11 2026] 127.0.0.1:47290 Accepted
+[Thu Oct  1 00:35:13 2026] 127.0.0.1:47290 [200]: GET /index.php?ruta=transferencia/formulario
+[Thu Oct  1 00:35:13 2026] 127.0.0.1:47290 Closing
+[Thu Oct  1 00:35:14 2026] 127.0.0.1:47858 Accepted
+[Thu Oct  1 00:35:14 2026] 127.0.0.1:47858 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:14 2026] 127.0.0.1:47858 Closing
+[Thu Oct  1 00:35:14 2026] 127.0.0.1:56927 Accepted
+[Thu Oct  1 00:35:15 2026] 127.0.0.1:56927 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:35:15 2026] 127.0.0.1:56927 Closing
+[Thu Oct  1 00:35:15 2026] 127.0.0.1:18292 Accepted
+[Thu Oct  1 00:35:15 2026] 127.0.0.1:18292 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:15 2026] 127.0.0.1:18292 Closing
+[Thu Oct  1 00:35:16 2026] 127.0.0.1:17853 Accepted
+[Thu Oct  1 00:35:17 2026] 127.0.0.1:17853 [200]: GET /index.php?ruta=retiro/historial
+[Thu Oct  1 00:35:17 2026] 127.0.0.1:17853 Closing
+[Thu Oct  1 00:35:18 2026] 127.0.0.1:28376 Accepted
+[Thu Oct  1 00:35:18 2026] 127.0.0.1:28376 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:18 2026] 127.0.0.1:28376 Closing
+[Thu Oct  1 00:35:18 2026] 127.0.0.1:41672 Accepted
+[Thu Oct  1 00:35:19 2026] 127.0.0.1:41672 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:35:19 2026] 127.0.0.1:41672 Closing
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:50451 Accepted
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:50451 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:50451 Closing
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:46054 Accepted
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:46054 [200]: GET /index.php?ruta=transferencia/historial
+[Thu Oct  1 00:35:20 2026] 127.0.0.1:46054 Closing
+[Thu Oct  1 00:35:21 2026] 127.0.0.1:19404 Accepted
+[Thu Oct  1 00:35:21 2026] 127.0.0.1:19404 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:21 2026] 127.0.0.1:19404 Closing
+[Thu Oct  1 00:35:21 2026] 127.0.0.1:25874 Accepted
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:25874 [200]: GET /index.php?ruta=cuenta/panel
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:25874 Closing
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:51163 Accepted
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:51163 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:51163 Closing
+[Thu Oct  1 00:35:24 2026] 127.0.0.1:27897 Accepted
+[Thu Oct  1 00:35:25 2026] 127.0.0.1:27897 [302]: GET /index.php?ruta=sesion/logout
+[Thu Oct  1 00:35:25 2026] 127.0.0.1:27897 Closing
+[Thu Oct  1 00:35:25 2026] 127.0.0.1:37000 Accepted
+[Thu Oct  1 00:35:25 2026] 127.0.0.1:37000 [200]: GET /index.php?ruta=sesion/login
+[Thu Oct  1 00:35:25 2026] 127.0.0.1:37000 Closing
+[Thu Oct  1 00:35:26 2026] 127.0.0.1:27340 Accepted
+[Thu Oct  1 00:35:26 2026] 127.0.0.1:27340 [200]: GET /css/estilo.css
+[Thu Oct  1 00:35:26 2026] 127.0.0.1:27340 Closing
+[Thu Oct  1 00:35:26 2026] 127.0.0.1:30058 Accepted
+^C
